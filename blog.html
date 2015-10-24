@@ -81,6 +81,45 @@
                     </h2>
                     <hr>
                 </div>
+				<div style="margin:auto;width:80%;">  
+<div id="chart_div" style="margin:auto;width:600px;height:400px;"></div>    
+</div>  
+  
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>     
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>  
+<script type="text/javascript">  
+google.load("visualization", "1", {packages:["corechart"]});  
+google.setOnLoadCallback(drawChart);  
+function drawChart() {  
+    // สร้างตัวแปร array เก็บค่า ข้อมูล  
+    var dataArray1=[  
+      ['ปี', 'ยอดขาย', 'ค่าใช้จ่าย'],  
+      ['2004',  1000,      400],  
+      ['2005',  1170,      460],  
+      ['2006',  660,       1120],  
+      ['2007',  1030,      540]              
+    ];  
+          
+    // แปลงข้อมูลจาก array สำหรับใช้ในการสร้าง กราฟ  
+    var data = google.visualization.arrayToDataTable(dataArray1);  
+  
+    // ตั้งค่าต่างๆ ของกราฟ  
+    var options = {   
+        title: "หัวข้อกราฟ",  
+        hAxis: {title: 'ข้อความแนวนอน', titleTextStyle: {color: 'red'}},  
+        vAxis: {title: 'ข้อความแนวตั้ง', titleTextStyle: {color: 'blue'}},  
+        width: 600,  
+        height: 400,  
+        bar: {groupWidth: "70%"},  
+        legend: { position: 'right', maxLines: 3 },  
+        tooltip: { trigger: 'select' }  
+    };  
+  
+    // สร้างกราฟแนวตั้ง แสดงใน div id = chart_div  
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));  
+    chart.draw(data, options); // สร้างกราฟ  
+      
+}  
                 <div class="col-lg-12 text-center">
                     <!-- <img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt=""> -->
                     <h2>Post Title
