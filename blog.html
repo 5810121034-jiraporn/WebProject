@@ -48,17 +48,17 @@
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
         data.addRows([
-          ['06.00-09.00', 20],
-          ['09.00-12.00', 10],
-          ['12.00-15.00', 1],
-          ['15.00-18.00', 5],
-          ['18.00-21.00', 40]
+          ['06.00-09.00 น.', 20],
+          ['09.00-12.00 น.', 10],
+          ['12.00-15.00 น.', 1],
+          ['15.00-18.00 น.', 5],
+          ['18.00-21.00 น.', 40]
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
+        var options = {'title':'รายงานการใช้บริการของลูกค้าตามช่วงเวลา',
+                       'width':600,
+                       'height':400};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -120,31 +120,11 @@
                     <hr>
                 </div>
 				<!-- กราฟ -->
-				ทดสอบการแสดงผล 
 				<!--Div that will hold the pie chart-->
-					<div id="chart_div"></div>
+					<div id="chart_div" align="center"></div>
 				<!-- end กราฟ -->
 
-                <div class="col-lg-12 text-center">
-                    <!-- <img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt=""> -->
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#" class="btn btn-default btn-lg">Read More</a>
-                    <hr>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <!-- <img class="img-responsive img-border img-full" src="img/slide-2.jpg" alt=""> -->
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#" class="btn btn-default btn-lg">Read More</a>
-                    <hr>
-                </div>
+                
                 <div class="col-lg-12 text-center">
                     <!-- <img class="img-responsive img-border img-full" src="img/slide-3.jpg" alt=""> -->
                     <h2>Post Title
