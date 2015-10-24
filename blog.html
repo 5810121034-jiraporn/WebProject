@@ -57,15 +57,14 @@
 
         // Set chart options
         var options = {'title':'รายงานการใช้บริการของลูกค้าตามช่วงเวลา',
-                       'width':600,
-                       'height':400};
+                       'width':500,
+                       'height':350};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
  
-
 google.load('visualization', '1', {packages: ['corechart', 'bar']});
 google.setOnLoadCallback(drawColColors);
 
@@ -166,8 +165,9 @@ function drawColColors() {
 				<!-- กราฟ -->
 				<!--Div that will hold the pie chart-->
 					<div id="chart_div" align="center"></div>
-				<!-- end กราฟ -->
+				<BR><BR>
 					<div id="chart_div2" align="center"></div>
+				<!-- end กราฟ -->
             </div>
         </div>
 
